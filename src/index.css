@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-gold-50: #fbf7e6;
+  --color-gold-100: #f5ecc3;
+  --color-gold-200: #ebd88a;
+  --color-gold-300: #e0c056;
+  --color-gold-400: #d4af37;
+  --color-gold-500: #b59228;
+  --color-gold-600: #94721e;
+  --color-gold-700: #76561b;
+  --color-gold-800: #62461d;
+  --color-gold-900: #543b1d;
+}
+
+:root {
+  --bg-light: #ffffff;
+  --text-dark: #1a1a1a;
+  --text-muted: #666666;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* Noise Overlay - lighter for white theme */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+::selection {
+  background-color: var(--color-gold-400);
+  color: white;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Smooth Image Reveal Class */
+.reveal-image {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.reveal-image.hidden {
+  clip-path: inset(100% 0 0 0);
+}
