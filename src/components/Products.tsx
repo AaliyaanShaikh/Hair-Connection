@@ -49,14 +49,14 @@ export default function Products() {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
 
   return (
-    <section ref={containerRef} className="py-32 bg-white overflow-hidden">
+    <section ref={containerRef} id="products" className="py-32 bg-white overflow-hidden">
       <div className="px-6 md:px-12 mb-16 flex justify-between items-end">
         <div>
           <h2 className="text-4xl md:text-6xl font-serif text-black mb-2">The Apothecary</h2>
           <p className="text-black/50 uppercase tracking-widest text-sm">Curated Essentials</p>
         </div>
-        <button className="hidden md:flex items-center gap-2 px-6 py-3 rounded-full border border-black/10 hover:bg-black hover:text-white transition-all duration-300">
-          <span className="text-xs uppercase tracking-widest font-bold">Shop All</span>
+        <button className="hidden md:flex items-center gap-2 rounded-full border border-neutral-300 bg-white text-neutral-900 px-8 py-4 text-sm font-medium tracking-widest uppercase hover:bg-neutral-50 hover:border-neutral-400 transition-all duration-300">
+          <span className="text-xs font-medium tracking-widest uppercase">Shop All</span>
           <ArrowRight size={14} />
         </button>
       </div>
@@ -75,7 +75,7 @@ export default function Products() {
                 />
                 
                 {/* Floating Action Button */}
-                <button className="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-black hover:bg-gold-400 hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all">
+                <button className="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-black hover:bg-gold-shiny hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all">
                   <Plus size={20} />
                 </button>
               </div>

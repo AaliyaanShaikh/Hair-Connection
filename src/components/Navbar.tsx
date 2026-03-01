@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const navItems = [
   { name: "Services", href: "#services" },
-  { name: "Collection", href: "#collection" },
-  { name: "Atelier", href: "#atelier" },
+  { name: "Products", href: "#products" },
+  { name: "Experience", href: "#collection" },
   { name: "Reviews", href: "#reviews" },
   { name: "Book", href: "#book" },
 ];
@@ -33,11 +33,11 @@ export default function Navbar() {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="fixed top-0 left-0 right-0 z-50 py-6 px-6 md:px-12 text-black mix-blend-difference"
+        className="fixed top-0 left-0 right-0 z-50 py-6 px-6 md:px-12 bg-white/95 backdrop-blur-sm border-b border-neutral-100"
       >
         <div className="flex justify-between items-center max-w-[1920px] mx-auto">
-          <a href="#" className="text-xl font-serif font-bold tracking-[0.2em] uppercase text-white mix-blend-difference">
-            Lumière
+          <a href="#" className="text-xl font-serif font-bold tracking-[0.2em] uppercase text-gold-shiny">
+            Hair Connection
           </a>
 
           {/* Desktop Nav */}
@@ -46,7 +46,7 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-xs uppercase tracking-[0.2em] font-medium hover:text-gold-400 transition-colors text-white mix-blend-difference"
+                className="text-xs uppercase tracking-[0.2em] font-medium text-neutral-700 hover:text-gold-shiny transition-colors"
               >
                 {item.name}
               </a>
@@ -55,7 +55,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white mix-blend-difference"
+            className="md:hidden text-neutral-900"
             onClick={() => setIsOpen(!isOpen)}
           >
             <Menu size={24} />
@@ -82,7 +82,7 @@ export default function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-4xl font-serif text-black hover:text-gold-400 transition-colors"
+              className="text-4xl font-serif text-black hover:text-gold-shiny transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {item.name}

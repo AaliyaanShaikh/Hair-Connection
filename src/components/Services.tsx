@@ -56,7 +56,9 @@ export default function Services() {
 
       <div className="px-4 md:px-8">
         {services.map((service, index) => (
-          <ServiceCard key={service.id} service={service} index={index} total={services.length} />
+          <div key={service.id} className="contents">
+            <ServiceCard service={service} index={index} total={services.length} />
+          </div>
         ))}
       </div>
     </section>
@@ -77,7 +79,7 @@ function ServiceCard({ service, index, total }) {
       {/* Text Section */}
       <div className="flex-1 p-8 md:p-16 flex flex-col justify-between relative z-10">
         <div className="flex justify-between items-start">
-          <span className="inline-block px-4 py-2 rounded-full border border-black/10 text-xs uppercase tracking-widest bg-white">
+          <span className="inline-block px-4 py-2 rounded-full border border-black/10 text-[11px] font-medium uppercase tracking-[0.2em] bg-white">
             {service.id}
           </span>
           <ArrowUpRight className="text-black/30" size={32} />

@@ -32,7 +32,7 @@ export default function Philosophy() {
              transition={{ duration: 0.8 }}
            >
              <h2 className="text-5xl md:text-7xl font-serif leading-none mb-8">
-               Beauty is <br/> <span className="italic text-gold-400">Intention.</span>
+               Beauty is <br/> <span className="italic text-gold-shiny">Intention.</span>
              </h2>
              <div className="h-[1px] w-24 bg-white/30 mb-8" />
            </motion.div>

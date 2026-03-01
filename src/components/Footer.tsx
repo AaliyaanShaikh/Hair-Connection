@@ -1,88 +1,114 @@
-import { motion } from "motion/react";
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram } from "lucide-react";
+
+const links = {
+  explore: [
+    { label: "Services", href: "#services" },
+    { label: "Products", href: "#products" },
+    { label: "Experience", href: "#collection" },
+    { label: "Reviews", href: "#reviews" },
+    { label: "Book", href: "#book" },
+  ],
+  legal: [
+    { label: "Privacy Policy", href: "#" },
+    { label: "Terms of Service", href: "#" },
+  ],
+};
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-white pt-24 pb-12 border-t border-neutral-100 text-black">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-          {/* Brand */}
-          <div className="space-y-6">
-            <a href="#" className="text-3xl font-serif font-bold tracking-widest text-black">
-              LUMIÈRE
-            </a>
-            <p className="text-black/60 leading-relaxed">
-              Redefining luxury haircare with a commitment to excellence, sustainability, and personalized style.
-            </p>
-            <div className="flex space-x-4">
-              {[Instagram, Facebook, Twitter].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center hover:bg-gold-400 hover:border-gold-400 hover:text-white transition-all duration-300">
-                  <Icon size={18} />
-                </a>
-              ))}
+    <footer id="contact" className="bg-white text-neutral-900 border-t border-neutral-100">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        {/* Main footer content */}
+        <div className="py-20 md:py-24 border-b border-neutral-100">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-12">
+            {/* Brand */}
+            <div className="md:col-span-5">
+              <a
+                href="#"
+                className="text-2xl font-serif tracking-tight text-gold-shiny hover:opacity-80 transition-opacity"
+              >
+                Hair Connection
+              </a>
+              <p className="mt-6 text-neutral-500 text-sm leading-relaxed max-w-sm">
+                Redefining luxury haircare with a commitment to excellence,
+                sustainability, and personalized style.
+              </p>
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 mt-6 text-gold-shiny hover:opacity-80 text-sm transition-opacity"
+              >
+                <Instagram size={16} />
+                <span>@hairconnection</span>
+              </a>
             </div>
-          </div>
 
-          {/* Contact */}
-          <div>
-            <h4 className="text-lg font-serif mb-6 text-black">Contact</h4>
-            <ul className="space-y-4 text-black/70">
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="mt-1 text-gold-400" />
-                <span>123 Fashion Avenue,<br />New York, NY 10012</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-gold-400" />
-                <span>+1 (212) 555-0199</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail size={18} className="text-gold-400" />
-                <span>concierge@lumiere.com</span>
-              </li>
-            </ul>
-          </div>
+            {/* Links */}
+            <div className="md:col-span-2">
+              <p className="text-[11px] font-medium tracking-[0.2em] uppercase mb-6 text-gold-shiny">
+                Explore
+              </p>
+              <ul className="space-y-4">
+                {links.explore.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="text-neutral-600 hover:text-neutral-900 text-sm transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Hours */}
-          <div>
-            <h4 className="text-lg font-serif mb-6 text-black">Hours</h4>
-            <ul className="space-y-2 text-black/70">
-              <li className="flex justify-between">
-                <span>Mon - Fri</span>
-                <span className="text-black">9:00 AM - 8:00 PM</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Saturday</span>
-                <span className="text-black">10:00 AM - 6:00 PM</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Sunday</span>
-                <span className="text-gold-400">Closed</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h4 className="text-lg font-serif mb-6 text-black">Newsletter</h4>
-            <p className="text-black/50 mb-4 text-sm">Subscribe for exclusive offers and style trends.</p>
-            <form className="flex flex-col gap-3">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="bg-neutral-50 border border-neutral-200 px-4 py-3 text-black focus:outline-none focus:border-gold-400 transition-colors"
-              />
-              <button className="bg-black text-white px-4 py-3 font-medium uppercase tracking-wider hover:bg-gold-400 transition-colors">
-                Subscribe
-              </button>
-            </form>
+            {/* Contact */}
+            <div className="md:col-span-5">
+              <p className="text-[11px] font-medium tracking-[0.2em] uppercase mb-6 text-gold-shiny">
+                Contact
+              </p>
+              <ul className="space-y-4 text-sm text-neutral-600">
+                <li className="flex items-start gap-3">
+                  <MapPin size={16} className="mt-0.5 flex-shrink-0 text-neutral-400" />
+                  <span>123 Fashion Avenue, New York, NY 10012</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Phone size={16} className="flex-shrink-0 text-neutral-400" />
+                  <a href="tel:+12125550199" className="hover:text-neutral-900 transition-colors">
+                    +1 (212) 555-0199
+                  </a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Mail size={16} className="flex-shrink-0 text-neutral-400" />
+                  <a href="mailto:concierge@hairconnection.com" className="hover:text-neutral-900 transition-colors">
+                    concierge@hairconnection.com
+                  </a>
+                </li>
+              </ul>
+              <div className="mt-8 text-xs text-neutral-500">
+                <p className="font-medium text-neutral-600 mb-2">Hours</p>
+                <p>Mon – Fri 9:00 AM – 8:00 PM</p>
+                <p>Saturday 10:00 AM – 6:00 PM</p>
+                <p>Sunday Closed</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-neutral-100 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-black/40">
-          <p>&copy; 2024 Lumière Salon. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-black transition-colors">Terms of Service</a>
+        {/* Bottom bar */}
+        <div className="py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <p className="text-neutral-500 text-xs">
+            © {new Date().getFullYear()} <span className="text-gold-shiny">Hair Connection</span>
+          </p>
+          <div className="flex gap-8">
+            {links.legal.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-neutral-500 hover:text-neutral-900 text-xs transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>

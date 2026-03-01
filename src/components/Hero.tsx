@@ -70,6 +70,17 @@ export default function Hero() {
         </motion.div>
       </div>
 
+      {/* Book a Session - Corner pill */}
+      <motion.a
+        href="#book"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.6 }}
+        className="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-20 rounded-full bg-white text-black px-8 py-4 text-sm font-medium tracking-widest uppercase hover:bg-neutral-100 transition-colors"
+      >
+        Book a Session
+      </motion.a>
+
       {/* Scroll Indicator */}
       <motion.div 
         initial={{ opacity: 0 }}

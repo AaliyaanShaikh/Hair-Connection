@@ -3,12 +3,14 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Collection from "./components/Collection";
 import Team from "./components/Team";
+import StudioCreators from "./components/StudioCreators";
 import Footer from "./components/Footer";
 import Marquee from "./components/Marquee";
 import Testimonials from "./components/Testimonials";
 import Products from "./components/Products";
 import Process from "./components/Process";
 import Philosophy from "./components/Philosophy";
+import CTA from "./components/CTA";
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 
@@ -23,7 +25,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-white min-h-screen text-black selection:bg-gold-400 selection:text-white">
+    <div className="bg-white min-h-screen text-black selection-gold-shiny">
       <AnimatePresence mode="wait">
         {loading && (
           <motion.div
@@ -38,7 +40,7 @@ export default function App() {
                 animate={{ y: 0 }}
                 className="text-6xl md:text-9xl font-serif font-bold tracking-tighter text-black"
               >
-                LUMIÈRE
+                HAIR CONNECTION
               </motion.h1>
             </div>
           </motion.div>
@@ -57,31 +59,11 @@ export default function App() {
         <Process />
         <Services />
         <Products />
-        <Collection />
         <Team />
+        <Collection />
+        <StudioCreators />
         <Testimonials />
-        
-        {/* Booking CTA - Minimal Luxury */}
-        <section id="book" className="py-32 bg-white text-center">
-          <div className="max-w-3xl mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-7xl font-serif mb-8 text-black">
-                Your Moment <br/> <span className="italic text-gold-500">Awaits</span>
-              </h2>
-              <p className="text-black/60 text-lg mb-12 leading-relaxed">
-                Experience the art of hair in our sanctuary. <br/>
-                Book your consultation today.
-              </p>
-              <button className="bg-black text-white px-12 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-gold-500 transition-colors duration-300">
-                Reserve Appointment
-              </button>
-            </motion.div>
-          </div>
-        </section>
+        <CTA />
       </main>
 
       <Footer />
