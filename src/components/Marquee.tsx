@@ -11,16 +11,22 @@ export default function Marquee() {
         {[...Array(4)].map((_, i) => (
           <div key={i} className="flex items-center">
             <span className="text-4xl md:text-6xl font-serif text-white uppercase px-8">
-              Hair Connection
+              Haircut & Styling
             </span>
             <span className="text-4xl md:text-6xl font-serif text-gold-shiny italic px-8">
-              Paris
+              Styling
             </span>
             <span className="text-4xl md:text-6xl font-serif text-white uppercase px-8">
-              New York
+              Facials & Skincare
             </span>
             <span className="text-4xl md:text-6xl font-serif text-gold-shiny italic px-8">
-              Tokyo
+              Makeover
+            </span>
+            <span className="text-4xl md:text-6xl font-serif text-white uppercase px-8">
+              Hair Spa & Treatments
+            </span>
+            <span className="text-4xl md:text-6xl font-serif text-gold-shiny italic px-8">
+              Coloration
             </span>
           </div>
         ))}

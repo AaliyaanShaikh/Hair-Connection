@@ -2,6 +2,10 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import { useRef } from "react";
 
+interface ProcessProps {
+  onOpenBooking?: () => void;
+}
+
 const steps = [
   {
     id: "01",
@@ -29,7 +33,7 @@ const steps = [
   }
 ];
 
-export default function Process() {
+export default function Process({ onOpenBooking }: ProcessProps) {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -65,8 +69,9 @@ export default function Process() {
               </div>
             </div>
           ))}
-          <a
-            href="#book"
+          <button
+            type="button"
+            onClick={() => onOpenBooking?.()}
             className="flex-shrink-0 w-[65vw] sm:w-[75vw] md:w-[30vw] flex flex-col justify-center items-center text-center group cursor-pointer touch-manipulation"
           >
             <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-neutral-900 active:bg-white active:text-neutral-900 transition-all duration-300 shadow-lg [&:active_svg]:text-neutral-900 [&:active_svg]:rotate-45">
@@ -75,7 +80,7 @@ export default function Process() {
             <p className="mt-4 sm:mt-6 md:mt-8 font-serif text-base sm:text-lg md:text-xl text-white group-hover:text-neutral-900 transition-colors">
               Book a session
             </p>
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>

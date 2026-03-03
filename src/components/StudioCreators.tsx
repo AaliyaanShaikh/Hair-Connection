@@ -134,12 +134,13 @@ export default function StudioCreators({ onOpenBooking }: StudioCreatorsProps) {
             <h3 className="font-serif text-xl sm:text-2xl font-semibold text-gold-shiny mb-6">
               Ready to get started?
             </h3>
-              <a
-                href="#book"
-                className="inline-flex items-center justify-center rounded-full bg-white text-black px-8 py-4 text-sm font-medium tracking-widest uppercase hover:bg-neutral-800 transition-colors touch-manipulation"
-              >
-                Check availability
-              </a>
+            <button
+              type="button"
+              onClick={() => onOpenBooking?.()}
+              className="inline-flex items-center justify-center rounded-full bg-white text-black px-8 py-4 text-sm font-medium tracking-widest uppercase hover:bg-neutral-800 transition-colors touch-manipulation"
+            >
+              Check availability
+            </button>
           </div>
         </motion.div>
       </div>

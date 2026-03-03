@@ -1,6 +1,10 @@
 import { motion } from "motion/react";
 
-export default function CTA() {
+interface CTAProps {
+  onOpenBooking?: () => void;
+}
+
+export default function CTA({ onOpenBooking }: CTAProps) {
   return (
     <section id="book" className="bg-white">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-24 md:py-32">
@@ -26,22 +30,15 @@ export default function CTA() {
               consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <motion.a
-                href="#"
+              <motion.button
+                type="button"
+                onClick={() => onOpenBooking?.()}
                 className="inline-flex items-center justify-center rounded-full bg-gold-shiny text-neutral-900 px-8 py-4 text-sm font-medium tracking-widest uppercase hover:opacity-90 transition-opacity duration-200"
                 whileHover={{ y: -1 }}
                 whileTap={{ scale: 0.99 }}
               >
-                Reserve appointment
-              </motion.a>
-              <motion.a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-full border border-neutral-300 text-neutral-700 px-8 py-4 text-sm font-medium tracking-widest uppercase hover:border-neutral-400 hover:bg-neutral-50 transition-colors duration-200"
-                whileHover={{ y: -1 }}
-                whileTap={{ scale: 0.99 }}
-              >
-                Call us
-              </motion.a>
+                Book a session
+              </motion.button>
             </div>
           </motion.div>
 

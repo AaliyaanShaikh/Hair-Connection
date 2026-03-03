@@ -12,14 +12,14 @@ const collectionImages = [
   {
     src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=2574&auto=format&fit=crop",
     span: "md:col-span-1",
-    height: "h-[40vh]",
+    height: "h-[50vh]",
     service: "Balayage & Tone",
     stylist: "Julian R.",
   },
   {
     src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2574&auto=format&fit=crop",
     span: "md:col-span-1",
-    height: "h-[50vh]",
+    height: "h-[60vh]",
     service: "Texture Styling",
     stylist: "Sarah K.",
   },
@@ -33,7 +33,7 @@ const collectionImages = [
   {
     src: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?q=80&w=2670&auto=format&fit=crop",
     span: "md:col-span-1",
-    height: "h-[50vh]",
+    height: "h-[70vh]",
     service: "Scalp Treatment",
     stylist: "Marc D.",
   },

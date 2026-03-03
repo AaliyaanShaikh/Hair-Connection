@@ -11,11 +11,13 @@ import Products from "./components/Products";
 import Process from "./components/Process";
 import Philosophy from "./components/Philosophy";
 import CTA from "./components/CTA";
+import BookingPopup from "./components/BookingPopup";
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -38,7 +40,7 @@ export default function App() {
               <motion.h1
                 initial={{ y: 100 }}
                 animate={{ y: 0 }}
-                className="text-6xl md:text-9xl font-serif font-bold tracking-tighter text-black"
+                className="text-6xl md:text-9xl font-serif font-bold tracking-tighter text-gold-shiny"
               >
                 HAIR CONNECTION
               </motion.h1>
@@ -50,23 +52,25 @@ export default function App() {
       {/* Noise Overlay */}
       <div className="noise-overlay" />
 
-      <Navbar />
+      <Navbar onOpenBooking={() => setIsBookingOpen(true)} />
       
       <main>
-        <Hero />
+        <Hero onOpenBooking={() => setIsBookingOpen(true)} />
         <Marquee />
         <Philosophy />
-        <Process />
+        <Process onOpenBooking={() => setIsBookingOpen(true)} />
         <Services />
         <Products />
         <Team />
         <Collection />
-        <StudioCreators />
+        <StudioCreators onOpenBooking={() => setIsBookingOpen(true)} />
         <Testimonials />
-        <CTA />
+        <CTA onOpenBooking={() => setIsBookingOpen(true)} />
       </main>
 
-      <Footer />
+      <Footer onOpenBooking={() => setIsBookingOpen(true)} />
+
+      <BookingPopup isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </div>
   );
 }

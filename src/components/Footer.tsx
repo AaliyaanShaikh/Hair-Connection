@@ -1,5 +1,9 @@
 import { MapPin, Phone, Mail, Instagram } from "lucide-react";
 
+interface FooterProps {
+  onOpenBooking?: () => void;
+}
+
 const links = {
   explore: [
     { label: "Services", href: "#services" },
@@ -9,12 +13,12 @@ const links = {
     { label: "Book", href: "#book" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
   ],
 };
 
-export default function Footer() {
+export default function Footer({ onOpenBooking }: FooterProps) {
   return (
     <footer id="contact" className="bg-white text-neutral-900 border-t border-neutral-100">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
@@ -48,16 +52,32 @@ export default function Footer() {
                 Explore
               </p>
               <ul className="space-y-4">
-                {links.explore.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-neutral-600 hover:text-neutral-900 text-sm transition-colors"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
+                {links.explore.map((link) => {
+                  const isBook = link.label === "Book";
+                  if (isBook) {
+                    return (
+                      <li key={link.label}>
+                        <button
+                          type="button"
+                          onClick={() => onOpenBooking?.()}
+                          className="text-neutral-600 hover:text-neutral-900 text-sm transition-colors"
+                        >
+                          {link.label}
+                        </button>
+                      </li>
+                    );
+                  }
+                  return (
+                    <li key={link.label}>
+                      <a
+                        href={link.href}
+                        className="text-neutral-600 hover:text-neutral-900 text-sm transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
@@ -69,18 +89,21 @@ export default function Footer() {
               <ul className="space-y-4 text-sm text-neutral-600">
                 <li className="flex items-start gap-3">
                   <MapPin size={16} className="mt-0.5 flex-shrink-0 text-neutral-400" />
-                  <span>123 Fashion Avenue, New York, NY 10012</span>
+                  <span>
+                    CHS Ltd, Victoria Tower, shop no : 04 Sai Milan, Ganpatrao Kadam Marg, Worli,
+                    Mumbai, Maharashtra 400013
+                  </span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={16} className="flex-shrink-0 text-neutral-400" />
-                  <a href="tel:+12125550199" className="hover:text-neutral-900 transition-colors">
-                    +1 (212) 555-0199
+                  <a href="tel:+919152915721" className="hover:text-neutral-900 transition-colors">
+                    +91 91529 15721
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail size={16} className="flex-shrink-0 text-neutral-400" />
-                  <a href="mailto:concierge@hairconnection.com" className="hover:text-neutral-900 transition-colors">
-                    concierge@hairconnection.com
+                  <a href="mailto:thehairconnection@gmail.com" className="hover:text-neutral-900 transition-colors">
+                    thehairconnection@gmail.com
                   </a>
                 </li>
               </ul>
@@ -97,7 +120,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <p className="text-neutral-500 text-xs">
-            © {new Date().getFullYear()} <span className="text-gold-shiny">Hair Connection</span>
+            © {new Date().getFullYear()} <span className="text-gold-shiny">Hair Connection.</span> <span className="text-balck">ALL RIGHTS RESERVED. DESIGNED BY EZOR.</span>
           </p>
           <div className="flex gap-8">
             {links.legal.map((link) => (

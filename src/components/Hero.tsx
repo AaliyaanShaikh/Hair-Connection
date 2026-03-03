@@ -1,7 +1,11 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
-export default function Hero() {
+interface HeroProps {
+  onOpenBooking?: () => void;
+}
+
+export default function Hero({ onOpenBooking }: HeroProps) {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -71,15 +75,16 @@ export default function Hero() {
       </div>
 
       {/* Book a Session - Corner pill */}
-      <motion.a
-        href="#book"
+      <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.6 }}
         className="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-20 rounded-full bg-white text-black px-8 py-4 text-sm font-medium tracking-widest uppercase hover:bg-neutral-100 transition-colors"
+        type="button"
+        onClick={() => onOpenBooking?.()}
       >
         Book a Session
-      </motion.a>
+      </motion.button>
 
       {/* Scroll Indicator */}
       <motion.div 
