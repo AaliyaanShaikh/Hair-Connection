@@ -52,7 +52,7 @@ export default function Products() {
     <section ref={containerRef} id="products" className="py-32 bg-white overflow-hidden">
       <div className="px-6 md:px-12 mb-16 flex justify-between items-end">
         <div>
-          <h2 className="text-4xl md:text-6xl font-serif text-black mb-2">The Apothecary</h2>
+          <h2 className="text-4xl md:text-6xl font-serif text-black mb-2">Product that we use</h2>
           <p className="text-black/50 uppercase tracking-widest text-sm">Curated Essentials</p>
         </div>
         <button className="hidden md:flex items-center gap-2 rounded-full border border-neutral-300 bg-white text-neutral-900 px-8 py-4 text-sm font-medium tracking-widest uppercase hover:bg-neutral-50 hover:border-neutral-400 transition-all duration-300">

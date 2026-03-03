@@ -80,7 +80,7 @@ export default function StudioCreators({ onOpenBooking }: StudioCreatorsProps) {
               viewport={{ once: true }}
               className="font-serif text-3xl md:text-4xl text-white tracking-tight"
             >
-              You've seen our studios everywhere
+              You've seen us everywhere
             </motion.h2>
             <div className="flex items-center gap-2">
               <button
