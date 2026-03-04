@@ -103,7 +103,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
                 <li className="flex items-center gap-3">
                   <Mail size={16} className="flex-shrink-0 text-neutral-400" />
                   <a href="mailto:thehairconnection@gmail.com" className="hover:text-neutral-900 transition-colors">
-                    thehairconnection@gmail.com
+                    thehairconnection06@gmail.com
                   </a>
                 </li>
               </ul>
