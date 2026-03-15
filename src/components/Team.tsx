@@ -14,53 +14,93 @@ export default function Team() {
   return (
     <section id="atelier" className="bg-white overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-24 md:py-32">
-        <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
-          {/* Portrait */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-24 md:gap-y-6 items-start">
+          {/* 1. Name - mobile first */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
+            className="order-1 md:col-start-2 md:row-start-1"
+          >
+            <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-gold-shiny mb-2 md:mb-6">
+              Founder&apos;s Insight
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 tracking-tight">
+              {founder.name}
+            </h2>
+          </motion.div>
+
+          {/* 2. Title */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="order-2 md:col-start-2 md:row-start-2"
+          >
+            <p className="text-gold-shiny text-sm tracking-[0.2em] uppercase mt-0 md:mt-4 mb-4 md:mb-8">
+              {founder.title}
+            </p>
+          </motion.div>
+
+          {/* 3. Image */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
-            className="order-2 md:order-1"
+            className="order-3 md:col-start-1 md:row-start-1 md:row-span-6 flex justify-center md:justify-start my-6 md:my-0"
           >
-            <div className="aspect-[4/5] w-full max-w-lg overflow-hidden">
-              <img
-                src={founder.image}
-                alt={founder.name}
-                className="w-full h-full object-cover object-top"
-                referrerPolicy="no-referrer"
-              />
+            <div className="relative w-full max-w-md">
+              <div className="aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
+                <img
+                  src={founder.image}
+                  alt={founder.name}
+                  className="w-full h-full object-cover object-top"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-gold-shiny/20 border border-gold-shiny/30 -z-10" aria-hidden />
             </div>
           </motion.div>
 
-          {/* Content */}
+          {/* 4. Story */}
           <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="order-1 md:order-2"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="order-4 md:col-start-2 md:row-start-3"
           >
-            <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-gold-shiny mb-6">
-              The Founder
-            </p>
-            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 tracking-tight mb-4">
-              {founder.name}
-            </h2>
-            <p className="text-gold-shiny text-sm tracking-[0.2em] uppercase mb-10">
-              {founder.title}
-            </p>
-
-            <p className="text-neutral-600 text-lg md:text-xl leading-relaxed mb-10">
+            <p className="text-neutral-600 text-lg md:text-xl leading-relaxed">
               {founder.story}
             </p>
+          </motion.div>
 
-            <blockquote className="border-l-2 border-gold-400 pl-6 py-2 mb-10">
+          {/* 5. Quote */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="order-5 md:col-start-2 md:row-start-4"
+          >
+            <blockquote className="border-l-2 border-gold-400 pl-6 py-2 mt-6 mb-4 md:mt-8 md:mb-8">
               <p className="font-serif text-xl md:text-2xl italic text-neutral-700">
-                "{founder.quote}"
+                &quot;{founder.quote}&quot;
               </p>
             </blockquote>
+          </motion.div>
 
+          {/* 6. Credentials */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="order-6 md:col-start-2 md:row-start-5"
+          >
             <div className="flex flex-wrap gap-4">
               {founder.credentials.map((item, index) => (
                 <span

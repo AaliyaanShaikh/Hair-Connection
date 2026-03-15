@@ -82,7 +82,7 @@ export default function Collection() {
       <div className="max-w-[1920px] mx-auto">
         <motion.div
           style={{ y: headerY, opacity: headerOpacity }}
-          className="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-black/10 pb-8"
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 border-b border-black/10 pb-8"
         >
           <div>
             <motion.span
@@ -94,7 +94,7 @@ export default function Collection() {
             >
               Our Work
             </motion.span>
-            <h2 className="text-5xl md:text-7xl font-serif text-black mb-4">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif text-black mb-4">
               Lookbook
             </h2>
             <p className="text-black/50 uppercase tracking-widest text-sm">
@@ -108,7 +108,7 @@ export default function Collection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="hidden md:block"
           >
-            <p className="text-black/60 max-w-xs text-right font-serif italic text-lg">
+            <p className="text-black/60 max-w-xs text-left md:text-right font-serif italic text-lg">
               "Capturing the essence of movement and light."
             </p>
           </motion.div>

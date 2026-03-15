@@ -44,11 +44,11 @@ export default function Services() {
     <section ref={containerRef} id="services" className="relative bg-white pb-32">
       {/* Section Header */}
       <div className="py-24 px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end border-b border-black/10 pb-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-black/10 pb-8">
            <h2 className="text-5xl md:text-7xl font-serif text-black leading-tight">
              Service Menu
            </h2>
-           <p className="text-black/50 max-w-xs text-right mt-6 md:mt-0">
+           <p className="text-black/50 max-w-xs text-left md:text-right mt-6 md:mt-0">
              Curated treatments designed to enhance your natural beauty.
            </p>
         </div>

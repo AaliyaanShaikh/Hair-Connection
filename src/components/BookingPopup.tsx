@@ -41,11 +41,11 @@ export default function BookingPopup({ isOpen, onClose }: BookingPopupProps) {
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", damping: 24, stiffness: 260 }}
             onClick={(e) => e.stopPropagation()}
-            className="fixed inset-0 z-[201] flex items-center justify-center p-6 md:p-8"
+            className="fixed inset-0 z-[201] flex items-center justify-center p-4 sm:p-6 md:p-8"
           >
-            <div className="relative w-full max-w-2xl bg-white/95 backdrop-blur-xl border border-white/30 rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
+            <div className="relative w-full max-w-2xl bg-white/95 backdrop-blur-xl border border-white/30 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] min-h-0 flex flex-col">
               {/* Header */}
-              <div className="flex justify-between items-center px-6 md:px-8 py-5 md:py-6 border-b border-neutral-200/70">
+              <div className="flex justify-between items-center px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 border-b border-neutral-200/70 flex-shrink-0">
                 <div>
                   <p className="text-[11px] tracking-[0.25em] uppercase text-neutral-500 mb-1">
                     Contact
@@ -65,7 +65,7 @@ export default function BookingPopup({ isOpen, onClose }: BookingPopupProps) {
               </div>
 
               {/* Content */}
-              <div className="px-6 md:px-8 py-6 md:py-8 space-y-8">
+              <div className="px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 space-y-6 sm:space-y-8 overflow-y-auto min-h-0 flex-1">
                 <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
                   View all the ways to reach our Worli studio—call, email, or visit in person to
                   plan your next hair transformation.

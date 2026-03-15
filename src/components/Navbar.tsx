@@ -46,17 +46,17 @@ export default function Navbar({ onOpenBooking, alwaysVisible }: NavbarProps) {
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className={[
-          "fixed top-0 left-0 right-0 z-50 py-6 px-6 md:px-12 border-b transition-colors duration-300",
+          "fixed top-0 left-0 right-0 z-50 py-4 sm:py-6 px-4 sm:px-6 md:px-12 border-b transition-colors duration-300",
           scrolled
             ? "bg-white/95 backdrop-blur-sm border-neutral-100"
             : "bg-transparent backdrop-blur-0 border-transparent",
         ].join(" ")}
       >
-        <div className="flex justify-between items-center max-w-[1920px] mx-auto">
+        <div className="flex justify-between items-center max-w-[1920px] mx-auto min-w-0">
           <a
             href="/"
             className={[
-              "text-xl font-serif font-bold tracking-[0.2em] uppercase transition-colors duration-300",
+              "text-base sm:text-lg md:text-xl font-serif font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase transition-colors duration-300 truncate",
               scrolled ? "text-gold-shiny" : "text-white drop-shadow-sm",
             ].join(" ")}
           >

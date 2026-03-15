@@ -18,7 +18,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} className="relative h-screen w-full overflow-hidden bg-black">
+    <section ref={containerRef} className="relative min-h-[100dvh] h-screen w-full overflow-hidden bg-black">
       {/* Background Image - Simulating a high-end video frame */}
       <motion.div 
         style={{ scale, y, opacity }}
@@ -74,12 +74,12 @@ export default function Hero({ onOpenBooking }: HeroProps) {
         </motion.div>
       </div>
 
-      {/* Book a Session - Corner pill */}
+      {/* Book a Session - Small pill in bottom-right corner (same on all screens) */}
       <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.6 }}
-        className="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-20 rounded-full bg-white text-black px-8 py-4 text-sm font-medium tracking-widest uppercase hover:bg-neutral-100 transition-colors"
+        className="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-20 rounded-full bg-white text-black px-6 py-3 md:px-8 md:py-4 text-xs md:text-sm font-medium tracking-widest uppercase hover:bg-neutral-100 transition-colors"
         type="button"
         onClick={() => onOpenBooking?.()}
       >
@@ -91,7 +91,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-20 text-white mix-blend-difference"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-20 text-white mix-blend-difference pointer-events-none"
       >
         <span className="text-[10px] uppercase tracking-widest opacity-70">Scroll</span>
         <motion.div 

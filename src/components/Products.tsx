@@ -50,9 +50,9 @@ export default function Products() {
 
   return (
     <section ref={containerRef} id="products" className="py-32 bg-white overflow-hidden">
-      <div className="px-6 md:px-12 mb-16 flex justify-between items-end">
-        <div>
-          <h2 className="text-4xl md:text-6xl font-serif text-black mb-2">Product that we use</h2>
+      <div className="px-4 sm:px-6 md:px-12 mb-10 sm:mb-16 flex flex-col sm:flex-row justify-between items-start gap-4">
+        <div className="min-w-0">
+          <h2 className="text-2xl sm:text-4xl md:text-6xl font-serif text-black mb-2">Product that we use</h2>
           <p className="text-black/50 uppercase tracking-widest text-sm">Curated Essentials</p>
         </div>
         <button className="hidden md:flex items-center gap-2 rounded-full border border-neutral-300 bg-white text-neutral-900 px-8 py-4 text-sm font-medium tracking-widest uppercase hover:bg-neutral-50 hover:border-neutral-400 transition-all duration-300">
@@ -62,10 +62,10 @@ export default function Products() {
       </div>
 
       {/* Horizontal Scroll Container */}
-      <div className="pl-6 md:pl-12 overflow-x-auto no-scrollbar pb-12">
-        <div className="flex gap-8 w-max">
+      <div className="pl-4 sm:pl-6 md:pl-12 overflow-x-auto no-scrollbar pb-12">
+        <div className="flex gap-4 sm:gap-8 w-max">
           {products.map((product) => (
-            <div key={product.id} className="group relative w-[280px] md:w-[350px] flex-shrink-0">
+            <div key={product.id} className="group relative w-[260px] sm:w-[280px] md:w-[350px] flex-shrink-0">
               <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-neutral-50 mb-6">
                 <img
                   src={product.image}

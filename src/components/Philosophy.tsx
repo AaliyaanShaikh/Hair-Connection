@@ -24,21 +24,22 @@ export default function Philosophy() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16 items-center">
-        <div>
+        <div className="text-center md:text-left w-full">
            <motion.div
              initial={{ opacity: 0, x: -50 }}
              whileInView={{ opacity: 1, x: 0 }}
              viewport={{ once: true }}
              transition={{ duration: 0.8 }}
+             className="flex flex-col items-center md:items-start"
            >
-             <h2 className="text-5xl md:text-7xl font-serif leading-none mb-8">
-               Beauty is <br/> <span className="italic text-gold-shiny">Intention.</span>
+             <h2 className="text-2xl sm:text-5xl md:text-7xl font-serif leading-none mb-6 sm:mb-8 whitespace-nowrap md:whitespace-normal">
+               Beauty is <span className="italic text-gold-shiny">Intention.</span>
              </h2>
              <div className="h-[1px] w-24 bg-white/30 mb-8" />
            </motion.div>
         </div>
 
-        <div className="space-y-8 text-lg md:text-xl font-light leading-relaxed text-white/80">
+        <div className="space-y-6 sm:space-y-8 text-base sm:text-lg md:text-xl font-light leading-relaxed text-white/80">
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
