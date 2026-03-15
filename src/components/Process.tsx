@@ -49,7 +49,7 @@ export default function Process({ onOpenBooking }: ProcessProps) {
            <p className="text-white/60 max-w-md text-sm md:text-base">A curated experience designed to transform.</p>
         </div>
         
-        <motion.div style={{ x }} className="flex gap-12 pl-[20vw] items-center pt-40">
+        <motion.div style={{ x }} className="flex gap-12 pl-[20vw] items-center pt-24 md:pt-48">
           {steps.map((step) => (
             <div key={step.id} className="relative w-[80vw] md:w-[60vw] h-[55vh] md:h-[70vh] flex-shrink-0 group">
               <div className="w-full h-full overflow-hidden rounded-2xl relative">
