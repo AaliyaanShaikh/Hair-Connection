@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BookingPopup from "./components/BookingPopup";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsOfService from "./components/TermsOfService";
+import { ScrollContainerContext } from "./contexts/ScrollContainerContext";
 
 interface LegalPageProps {
   page: "privacy" | "terms";
@@ -11,19 +12,26 @@ interface LegalPageProps {
 
 export default function LegalPage({ page }: LegalPageProps) {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const content = page === "privacy" ? <PrivacyPolicy /> : <TermsOfService />;
 
   return (
-    <div className="bg-white min-h-screen text-black selection-gold-shiny">
-      <Navbar onOpenBooking={() => setIsBookingOpen(true)} alwaysVisible />
+    <ScrollContainerContext.Provider value={scrollContainerRef}>
+      <div className="bg-white h-screen overflow-hidden text-black selection-gold-shiny">
+        <div className="noise-overlay" />
 
-      <main>{content}</main>
+        <Navbar onOpenBooking={() => setIsBookingOpen(true)} alwaysVisible />
 
-      <Footer onOpenBooking={() => setIsBookingOpen(true)} />
+        <div ref={scrollContainerRef} className="scroll-container">
+          <main>{content}</main>
 
-      <BookingPopup isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
-    </div>
+          <Footer onOpenBooking={() => setIsBookingOpen(true)} />
+        </div>
+
+        <BookingPopup isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
+      </div>
+    </ScrollContainerContext.Provider>
   );
 }
 

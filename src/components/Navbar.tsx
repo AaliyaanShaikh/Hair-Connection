@@ -1,6 +1,7 @@
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, type RefObject } from "react";
+import { useScrollContainer } from "../contexts/ScrollContainerContext";
 
 interface NavbarProps {
   onOpenBooking?: () => void;
@@ -18,7 +19,10 @@ const navItems = [
 export default function Navbar({ onOpenBooking, alwaysVisible }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
-  const { scrollY } = useScroll();
+  const scrollContainerRef = useScrollContainer();
+  const { scrollY } = useScroll(
+    scrollContainerRef ? { container: scrollContainerRef as RefObject<HTMLElement> } : {}
+  );
 
   const isLegalPage =
     typeof window !== "undefined" &&

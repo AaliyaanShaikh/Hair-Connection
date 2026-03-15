@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion } from "motion/react";
 import { useRef } from "react";
 
 const collectionImages = [
@@ -65,13 +65,6 @@ const itemVariants = {
 
 export default function Collection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
-
-  const headerY = useTransform(scrollYProgress, [0, 0.15], [80, 0]);
-  const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
     <section
@@ -80,10 +73,7 @@ export default function Collection() {
       className="py-24 md:py-32 px-6 md:px-12 bg-white relative overflow-hidden [contain:layout_paint]"
     >
       <div className="max-w-[1400px] mx-auto">
-        <motion.div
-          style={{ y: headerY, opacity: headerOpacity, willChange: "transform, opacity" }}
-          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 border-b border-black/10 pb-8 [transform:translateZ(0)]"
-        >
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 border-b border-black/10 pb-8">
           <div>
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -112,7 +102,7 @@ export default function Collection() {
               "Capturing the essence of movement and light."
             </p>
           </motion.div>
-        </motion.div>
+        </div>
 
         <motion.div
           variants={containerVariants}

@@ -56,6 +56,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Scroll container: no momentum – stops immediately when user stops scrolling */
+.scroll-container {
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: auto; /* iOS: no inertial scroll, immediate halt */
+  overscroll-behavior-y: none;
+}
+
 /* Noise Overlay - lighter for white theme; isolated to reduce scroll repaints */
 .noise-overlay {
   position: fixed;
@@ -104,4 +114,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .reveal-image.hidden {
   clip-path: inset(100% 0 0 0);
+}
+
+/* Hero background fade on scroll – uses nearest scroll container (runs on compositor) */
+@supports (animation-timeline: scroll()) {
+  .hero-bg-scroll-fade {
+    animation: hero-bg-fade linear;
+    animation-timeline: scroll(nearest block);
+    animation-range: 0vh 80dvh;
+  }
+}
+@keyframes hero-bg-fade {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }

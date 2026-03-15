@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { useRef, type RefObject } from "react";
 import { ArrowRight, Plus } from "lucide-react";
+import { useScrollContainer } from "../contexts/ScrollContainerContext";
 
 const products = [
   {
@@ -42,8 +43,10 @@ const products = [
 
 export default function Products() {
   const containerRef = useRef(null);
+  const scrollContainerRef = useScrollContainer();
   const { scrollYProgress } = useScroll({
     target: containerRef,
+    ...(scrollContainerRef && { container: scrollContainerRef as RefObject<HTMLElement> }),
   });
 
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);

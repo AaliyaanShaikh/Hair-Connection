@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { useRef, type RefObject } from "react";
 import { ArrowUpRight } from "lucide-react";
+import { useScrollContainer } from "../contexts/ScrollContainerContext";
 
 const services = [
   {
@@ -35,9 +36,11 @@ const services = [
 
 export default function Services() {
   const containerRef = useRef(null);
+  const scrollContainerRef = useScrollContainer();
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"]
+    offset: ["start start", "end end"],
+    ...(scrollContainerRef && { container: scrollContainerRef as RefObject<HTMLElement> }),
   });
 
   return (

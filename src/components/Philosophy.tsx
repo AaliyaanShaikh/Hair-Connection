@@ -1,22 +1,10 @@
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { motion } from "motion/react";
 
 export default function Philosophy() {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
-
   return (
-    <section ref={containerRef} className="relative py-24 md:py-32 overflow-hidden bg-neutral-900 text-white [contain:layout_paint]">
+    <section className="relative py-24 md:py-32 overflow-hidden bg-neutral-900 text-white [contain:layout_paint]">
       <div className="absolute inset-0 z-0 opacity-40">
-        <motion.div
-          style={{ y, willChange: "transform" }}
-          className="h-[120%] w-full [transform:translateZ(0)]"
-        >
+        <div className="h-[120%] w-full">
            <img
              src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2670&auto=format&fit=crop"
              alt="Philosophy Background"
@@ -24,7 +12,7 @@ export default function Philosophy() {
              className="w-full h-full object-cover grayscale"
              referrerPolicy="no-referrer"
            />
-        </motion.div>
+        </div>
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 grid md:grid-cols-2 gap-16 items-center">

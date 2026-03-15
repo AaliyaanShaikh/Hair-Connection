@@ -1,27 +1,14 @@
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { motion } from "motion/react";
 
 interface HeroProps {
   onOpenBooking?: () => void;
 }
 
 export default function Hero({ onOpenBooking }: HeroProps) {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-
   return (
-    <section ref={containerRef} className="relative min-h-[100dvh] h-[100dvh] w-full overflow-hidden bg-black [contain:layout_paint]">
-      {/* Background Image - Simulating a high-end video frame */}
-      <motion.div
-        style={{ opacity, willChange: "opacity" }}
-        className="absolute inset-0 z-0"
-      >
+    <section className="relative min-h-[100dvh] h-[100dvh] w-full overflow-hidden bg-black [contain:layout_paint]">
+      {/* Background – fade via CSS scroll-driven animation (compositor, no scroll JS) */}
+      <div className="hero-bg-scroll-fade absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2574&auto=format&fit=crop"
           alt="Luxury Salon Atmosphere"
@@ -30,14 +17,11 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
-      </motion.div>
+      </div>
 
-      {/* Content */}
+      {/* Content – no scroll-driven motion to avoid deceleration lag */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center px-6 md:px-12 text-center">
-        <motion.div
-          style={{ y: textY, willChange: "transform" }}
-          className="space-y-5 md:space-y-10 mix-blend-difference text-white [transform:translateZ(0)]"
-        >
+        <div className="space-y-5 md:space-y-10 mix-blend-difference text-white">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
@@ -70,7 +54,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
               <span>Est. 2024</span>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Book a Session - Small pill in bottom-right corner (same on all screens) */}

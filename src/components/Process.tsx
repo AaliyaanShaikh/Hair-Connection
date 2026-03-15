@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
-import { useRef } from "react";
+import { useRef, type RefObject } from "react";
+import { useScrollContainer } from "../contexts/ScrollContainerContext";
 
 interface ProcessProps {
   onOpenBooking?: () => void;
@@ -35,8 +36,10 @@ const steps = [
 
 export default function Process({ onOpenBooking }: ProcessProps) {
   const targetRef = useRef(null);
+  const scrollContainerRef = useScrollContainer();
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    ...(scrollContainerRef && { container: scrollContainerRef as RefObject<HTMLElement> }),
   });
 
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-78%"]);
