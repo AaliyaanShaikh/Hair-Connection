@@ -18,7 +18,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} className="relative min-h-[88dvh] md:min-h-[100dvh] h-[88dvh] md:h-screen w-full overflow-hidden bg-black">
+    <section ref={containerRef} className="relative min-h-[100dvh] h-[100dvh] w-full overflow-hidden bg-black">
       {/* Background Image - Simulating a high-end video frame */}
       <motion.div 
         style={{ scale, y, opacity }}
@@ -30,7 +30,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           className="w-full h-full object-cover opacity-80"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
       </motion.div>
 
       {/* Content */}

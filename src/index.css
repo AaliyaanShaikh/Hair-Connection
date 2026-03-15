@@ -40,6 +40,11 @@
   --text-muted: #666666;
 }
 
+/* Prevent white flash on mobile when overscrolling upward (rubber-band) */
+html {
+  background-color: #0a0a0a;
+}
+
 body {
   background-color: var(--bg-light);
   color: var(--text-dark);
