@@ -21,7 +21,7 @@ const links = {
 export default function Footer({ onOpenBooking }: FooterProps) {
   return (
     <footer id="contact" className="bg-white text-neutral-900 border-t border-neutral-100">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-12">
         {/* Main footer content */}
         <div className="py-20 md:py-24 border-b border-neutral-100">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-12">
@@ -46,9 +46,9 @@ export default function Footer({ onOpenBooking }: FooterProps) {
               </a>
             </div>
 
-            {/* Explore and Contact side by side */}
-            <div className="grid grid-cols-2 md:grid-cols-12 gap-12 md:gap-12 md:col-span-12">
-              <div className="md:col-span-2">
+            {/* Explore and Contact side by side — on mobile first column auto so they sit close */}
+            <div className="grid grid-cols-[auto_1fr] md:grid-cols-12 gap-x-6 gap-y-10 md:gap-12 md:col-span-12">
+              <div className="min-w-0 md:col-span-2">
                 <p className="text-[11px] font-medium tracking-[0.2em] uppercase mb-6 text-gold-shiny">
                   Explore
                 </p>
