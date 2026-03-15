@@ -32,15 +32,15 @@ export default function App() {
         {loading && (
           <motion.div
             key="loader"
-            className="fixed inset-0 z-[100] bg-white flex items-center justify-center"
+            className="fixed inset-0 z-[100] bg-white flex items-center justify-center px-4"
             exit={{ y: "-100%" }}
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
           >
-            <div className="overflow-hidden">
+            <div className="overflow-hidden max-w-full min-w-0">
               <motion.h1
                 initial={{ y: 100 }}
                 animate={{ y: 0 }}
-                className="text-6xl md:text-9xl font-serif font-bold tracking-tighter text-gold-shiny"
+                className="font-serif font-bold tracking-tighter text-gold-shiny whitespace-nowrap text-[clamp(1.75rem,8vw,8rem)]"
               >
                 HAIR CONNECTION
               </motion.h1>
