@@ -44,9 +44,9 @@ export default function Process({ onOpenBooking }: ProcessProps) {
   return (
     <section ref={targetRef} className="relative h-[200vh] md:h-[250vh] bg-neutral-900 text-white">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <div className="absolute top-12 left-6 md:left-12 z-10">
-           <h2 className="text-4xl md:text-6xl font-serif mb-4">The Journey</h2>
-           <p className="text-white/60 max-w-md">A curated experience designed to transform.</p>
+        <div className="absolute top-20 md:top-24 left-6 md:left-12 z-10">
+           <h2 className="text-4xl md:text-6xl font-serif mb-1.5">The Journey</h2>
+           <p className="text-white/60 max-w-md text-sm md:text-base">A curated experience designed to transform.</p>
         </div>
         
         <motion.div style={{ x }} className="flex gap-12 pl-[20vw] items-center pt-40">

@@ -18,7 +18,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} className="relative min-h-[70dvh] md:min-h-[100dvh] h-[70dvh] md:h-screen w-full overflow-hidden bg-black">
+    <section ref={containerRef} className="relative min-h-[88dvh] md:min-h-[100dvh] h-[88dvh] md:h-screen w-full overflow-hidden bg-black">
       {/* Background Image - Simulating a high-end video frame */}
       <motion.div 
         style={{ scale, y, opacity }}
