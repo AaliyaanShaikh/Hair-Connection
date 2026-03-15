@@ -34,7 +34,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center items-center px-6 text-center">
+      <div className="relative z-10 h-full flex flex-col justify-center items-center px-6 md:px-12 text-center">
         <motion.div
           style={{ y: textY }}
           className="space-y-5 md:space-y-10 mix-blend-difference text-white"

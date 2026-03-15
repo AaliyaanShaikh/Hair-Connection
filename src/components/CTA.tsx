@@ -23,7 +23,7 @@ export default function CTA({ onOpenBooking }: CTAProps) {
           {/* Dark overlay for text readability */}
           <div className="absolute inset-0 bg-neutral-900/60 md:bg-gradient-to-r md:from-neutral-900/75 md:via-neutral-900/50 md:to-transparent" />
           {/* Text over image */}
-          <div className="absolute inset-0 flex flex-col justify-center px-6 py-12 md:px-12 md:py-16 lg:px-16 xl:px-24 lg:max-w-[50%]">
+          <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-12 py-12 md:py-16 lg:max-w-[50%]">
             <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-neutral-300 mb-4 md:mb-6">
               Book your visit
             </p>

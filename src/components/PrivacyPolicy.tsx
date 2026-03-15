@@ -1,7 +1,7 @@
 export default function PrivacyPolicy() {
   return (
     <section id="privacy" className="bg-white text-neutral-900 border-t border-neutral-100">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 md:py-28">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-24 md:py-32">
         <div className="max-w-3xl">
           <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-neutral-500 mb-4">
             Legal

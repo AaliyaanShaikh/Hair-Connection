@@ -49,8 +49,8 @@ export default function Products() {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
 
   return (
-    <section ref={containerRef} id="products" className="py-32 bg-white overflow-hidden">
-      <div className="px-4 sm:px-6 md:px-12 mb-10 sm:mb-16 flex flex-col sm:flex-row justify-between items-start gap-4">
+    <section ref={containerRef} id="products" className="py-24 md:py-32 bg-white overflow-hidden">
+      <div className="px-6 md:px-12 mb-10 sm:mb-16 flex flex-col sm:flex-row justify-between items-start gap-4">
         <div className="min-w-0">
           <h2 className="text-2xl sm:text-4xl md:text-6xl font-serif text-black mb-2">Product that we use</h2>
           <p className="text-black/50 uppercase tracking-widest text-sm">Curated Essentials</p>

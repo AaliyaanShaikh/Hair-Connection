@@ -21,7 +21,7 @@ const links = {
 export default function Footer({ onOpenBooking }: FooterProps) {
   return (
     <footer id="contact" className="bg-white text-neutral-900 border-t border-neutral-100">
-      <div className="max-w-[1400px] mx-auto px-4 md:px-12">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         {/* Main footer content */}
         <div className="py-20 md:py-24 border-b border-neutral-100">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-12">

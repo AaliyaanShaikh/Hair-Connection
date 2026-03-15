@@ -41,9 +41,9 @@ export default function Services() {
   });
 
   return (
-    <section ref={containerRef} id="services" className="relative bg-white pb-32">
+    <section ref={containerRef} id="services" className="relative bg-white pb-24 md:pb-32">
       {/* Section Header */}
-      <div className="py-24 px-6 md:px-12">
+      <div className="py-24 md:py-32 px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-black/10 pb-8">
            <h2 className="text-5xl md:text-7xl font-serif text-black leading-tight">
              Service Menu
@@ -54,7 +54,7 @@ export default function Services() {
         </div>
       </div>
 
-      <div className="px-4 md:px-8">
+      <div className="px-6 md:px-12">
         {services.map((service, index) => (
           <div key={service.id} className="contents">
             <ServiceCard service={service} index={index} total={services.length} />
