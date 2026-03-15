@@ -77,12 +77,12 @@ export default function Collection() {
     <section
       ref={sectionRef}
       id="collection"
-      className="py-24 md:py-32 px-6 md:px-12 bg-white relative overflow-hidden"
+      className="py-24 md:py-32 px-6 md:px-12 bg-white relative overflow-hidden [contain:layout_paint]"
     >
       <div className="max-w-[1400px] mx-auto">
         <motion.div
-          style={{ y: headerY, opacity: headerOpacity }}
-          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 border-b border-black/10 pb-8"
+          style={{ y: headerY, opacity: headerOpacity, willChange: "transform, opacity" }}
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 border-b border-black/10 pb-8 [transform:translateZ(0)]"
         >
           <div>
             <motion.span

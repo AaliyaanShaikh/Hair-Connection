@@ -11,12 +11,16 @@ export default function Philosophy() {
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
   return (
-    <section ref={containerRef} className="relative py-24 md:py-32 overflow-hidden bg-neutral-900 text-white">
+    <section ref={containerRef} className="relative py-24 md:py-32 overflow-hidden bg-neutral-900 text-white [contain:layout_paint]">
       <div className="absolute inset-0 z-0 opacity-40">
-        <motion.div style={{ y }} className="h-[120%] w-full">
-           <img 
-             src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2670&auto=format&fit=crop" 
-             alt="Philosophy Background" 
+        <motion.div
+          style={{ y, willChange: "transform" }}
+          className="h-[120%] w-full [transform:translateZ(0)]"
+        >
+           <img
+             src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2670&auto=format&fit=crop"
+             alt="Philosophy Background"
+             decoding="async"
              className="w-full h-full object-cover grayscale"
              referrerPolicy="no-referrer"
            />

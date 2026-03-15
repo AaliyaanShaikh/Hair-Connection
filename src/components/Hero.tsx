@@ -18,15 +18,16 @@ export default function Hero({ onOpenBooking }: HeroProps) {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} className="relative min-h-[100dvh] h-[100dvh] w-full overflow-hidden bg-black">
+    <section ref={containerRef} className="relative min-h-[100dvh] h-[100dvh] w-full overflow-hidden bg-black [contain:layout_paint]">
       {/* Background Image - Simulating a high-end video frame */}
-      <motion.div 
-        style={{ scale, y, opacity }}
-        className="absolute inset-0 z-0"
+      <motion.div
+        style={{ scale, y, opacity, willChange: "transform" }}
+        className="absolute inset-0 z-0 [transform:translateZ(0)]"
       >
         <img
           src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2574&auto=format&fit=crop"
           alt="Luxury Salon Atmosphere"
+          decoding="async"
           className="w-full h-full object-cover opacity-80"
           referrerPolicy="no-referrer"
         />
@@ -36,8 +37,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center px-6 md:px-12 text-center">
         <motion.div
-          style={{ y: textY }}
-          className="space-y-5 md:space-y-10 mix-blend-difference text-white"
+          style={{ y: textY, willChange: "transform" }}
+          className="space-y-5 md:space-y-10 mix-blend-difference text-white [transform:translateZ(0)]"
         >
           <motion.div 
             initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}

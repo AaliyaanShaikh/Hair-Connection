@@ -42,20 +42,27 @@ export default function Process({ onOpenBooking }: ProcessProps) {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-78%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[200vh] md:h-[250vh] bg-neutral-900 text-white">
+    <section
+      ref={targetRef}
+      className="relative h-[200vh] md:h-[250vh] bg-neutral-900 text-white [contain:layout_paint]"
+    >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <div className="absolute top-20 md:top-24 left-6 md:left-12 z-10">
            <h2 className="text-4xl md:text-6xl font-serif mb-1.5">The Journey</h2>
            <p className="text-white/60 max-w-md text-sm md:text-base">A curated experience designed to transform.</p>
         </div>
         
-        <motion.div style={{ x }} className="flex gap-12 pl-[20vw] items-center pt-24 md:pt-48">
+        <motion.div
+          style={{ x, willChange: "transform" }}
+          className="flex gap-12 pl-[20vw] items-center pt-24 md:pt-48 [transform:translateZ(0)]"
+        >
           {steps.map((step) => (
             <div key={step.id} className="relative w-[80vw] md:w-[60vw] h-[55vh] md:h-[70vh] flex-shrink-0 group">
               <div className="w-full h-full overflow-hidden rounded-2xl relative">
                 <img
                   src={step.image}
                   alt={step.title}
+                  decoding="async"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />

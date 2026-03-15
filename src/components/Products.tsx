@@ -70,6 +70,7 @@ export default function Products() {
                 <img
                   src={product.image}
                   alt={product.name}
+                  decoding="async"
                   className="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-700 ease-out"
                   referrerPolicy="no-referrer"
                 />
