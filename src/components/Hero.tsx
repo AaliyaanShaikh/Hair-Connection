@@ -12,8 +12,6 @@ export default function Hero({ onOpenBooking }: HeroProps) {
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1.1, 1]); // Slight zoom out on scroll for cinematic feel
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
@@ -21,8 +19,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
     <section ref={containerRef} className="relative min-h-[100dvh] h-[100dvh] w-full overflow-hidden bg-black [contain:layout_paint]">
       {/* Background Image - Simulating a high-end video frame */}
       <motion.div
-        style={{ scale, y, opacity, willChange: "transform" }}
-        className="absolute inset-0 z-0 [transform:translateZ(0)]"
+        style={{ opacity, willChange: "opacity" }}
+        className="absolute inset-0 z-0"
       >
         <img
           src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2574&auto=format&fit=crop"
