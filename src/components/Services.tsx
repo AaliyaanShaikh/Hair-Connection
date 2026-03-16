@@ -47,7 +47,7 @@ export default function Services() {
     <section ref={containerRef} id="services" className="relative bg-white pb-24 md:pb-32 [contain:layout_paint]">
       {/* Section Header */}
       <div className="py-24 md:py-32 px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-black/10 pb-4 md:pb-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-black/10 pb-2 md:pb-8">
            <h2 className="text-5xl md:text-7xl font-serif text-black leading-tight">
              Service Menu
            </h2>
