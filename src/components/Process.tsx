@@ -43,6 +43,8 @@ export default function Process({ onOpenBooking }: ProcessProps) {
   });
 
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-78%"]);
+  const grayscaleFilter = useTransform(scrollYProgress, [0, 0.35], ["grayscale(1)", "grayscale(0)"]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 0.35], [0.4, 0.2]);
 
   return (
     <section
@@ -62,14 +64,22 @@ export default function Process({ onOpenBooking }: ProcessProps) {
           {steps.map((step) => (
             <div key={step.id} className="relative w-[80vw] md:w-[60vw] h-[55vh] md:h-[70vh] flex-shrink-0 group">
               <div className="w-full h-full overflow-hidden rounded-2xl relative">
-                <img
-                  src={step.image}
-                  alt={step.title}
-                  decoding="async"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
+                <motion.div
+                  className="w-full h-full"
+                  style={{ filter: grayscaleFilter }}
+                >
+                  <img
+                    src={step.image}
+                    alt={step.title}
+                    decoding="async"
+                    className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-700"
+                    referrerPolicy="no-referrer"
+                  />
+                </motion.div>
+                <motion.div
+                  className="absolute inset-0 bg-black pointer-events-none"
+                  style={{ opacity: overlayOpacity }}
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700" />
                 
                 <div className="absolute bottom-0 left-0 w-full p-5 md:p-12">
                   <div className="text-gold-shiny text-xs md:text-sm font-bold tracking-widest mb-1 md:mb-2">STEP {step.id}</div>
