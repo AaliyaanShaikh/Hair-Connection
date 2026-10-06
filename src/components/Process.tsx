@@ -12,25 +12,25 @@ const steps = [
     id: "01",
     title: "Consultation",
     description: "We analyze your hair, structure, and lifestyle.",
-    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2669&auto=format&fit=crop"
+    image: "/stock/1522337360788-8b13dee7a37e.jpg"
   },
   {
     id: "02",
     title: "The Ritual",
     description: "Scalp massage and botanical treatment.",
-    image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2670&auto=format&fit=crop"
+    image: "/stock/1516975080664-ed2fc6a32937.jpg"
   },
   {
     id: "03",
     title: "Precision",
     description: "Architectural cutting and bespoke color.",
-    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2669&auto=format&fit=crop"
+    image: "/stock/1562322140-8baeececf3df.jpg"
   },
   {
     id: "04",
     title: "Finish",
     description: "Expert styling and home care tips.",
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2671&auto=format&fit=crop"
+    image: "/stock/1560869713-7d0a29430803.jpg"
   }
 ];
 

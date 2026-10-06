@@ -6,7 +6,7 @@ export default function Philosophy() {
       <div className="absolute inset-0 z-0 opacity-40">
         <div className="h-[120%] w-full">
            <img
-             src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2670&auto=format&fit=crop"
+             src="/stock/1487412720507-e7ab37603c6f.jpg"
              alt="Philosophy Background"
              decoding="async"
              className="w-full h-full object-cover grayscale"

@@ -5,19 +5,19 @@ const reviews = [
     text: "An absolute sanctuary. The attention to detail is unmatched in the city.",
     author: "Isabella R.",
     role: "Vogue Editor",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2564&auto=format&fit=crop",
+    image: "/stock/1534528741775-53994a69daeb.jpg",
   },
   {
     text: "Hair Connection isn't just a salon, it's a transformative experience. My hair has never looked better.",
     author: "Camille D.",
     role: "Model",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2574&auto=format&fit=crop",
+    image: "/stock/1580489944761-15a19d654956.jpg",
   },
   {
     text: "The color mastery here is on another level. Natural, radiant, and perfectly tailored.",
     author: "Sophie M.",
     role: "Paris",
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=2564&auto=format&fit=crop",
+    image: "/stock/1544005313-94ddf0286df2.jpg",
   },
 ];
 

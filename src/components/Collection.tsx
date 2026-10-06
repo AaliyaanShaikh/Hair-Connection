@@ -3,35 +3,35 @@ import { useRef } from "react";
 
 const collectionImages = [
   {
-    src: "https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=2626&auto=format&fit=crop",
+    src: "/stock/1492106087820-71f1a00d2b11.jpg",
     span: "md:col-span-1",
     height: "h-[60vh]",
     service: "Precision Cut",
     stylist: "Elena V.",
   },
   {
-    src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=2574&auto=format&fit=crop",
+    src: "/stock/1519699047748-de8e457a634e.jpg",
     span: "md:col-span-1",
     height: "h-[50vh]",
     service: "Balayage & Tone",
     stylist: "Julian R.",
   },
   {
-    src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2574&auto=format&fit=crop",
+    src: "/stock/1580618672591-eb180b1a973f.jpg",
     span: "md:col-span-1",
     height: "h-[60vh]",
     service: "Texture Styling",
     stylist: "Sarah K.",
   },
   {
-    src: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=2669&auto=format&fit=crop",
+    src: "/stock/1524504388940-b1c1722653e1.jpg",
     span: "md:col-span-2",
     height: "h-[70vh]",
     service: "Editorial Color",
     stylist: "Julian R.",
   },
   {
-    src: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?q=80&w=2670&auto=format&fit=crop",
+    src: "/stock/1500917293891-ef795e70e1f6.jpg",
     span: "md:col-span-1",
     height: "h-[70vh]",
     service: "Scalp Treatment",

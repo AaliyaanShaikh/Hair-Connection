@@ -10,7 +10,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       {/* Background – fade via CSS scroll-driven animation (compositor, no scroll JS) */}
       <div className="hero-bg-scroll-fade absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2574&auto=format&fit=crop"
+          src="/stock/1633681926022-84c23e8cb2d6.jpg"
           alt="Luxury Salon Atmosphere"
           decoding="async"
           className="w-full h-full object-cover opacity-80"

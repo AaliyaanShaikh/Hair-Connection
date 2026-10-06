@@ -168,12 +168,12 @@ export default function BookingPopup({ isOpen, onClose }: BookingPopupProps) {
                         Instagram
                       </p>
                       <a
-                        href="https://instagram.com/hairconnection"
+                        href="https://instagram.com/thehairconnection.salon"
                         target="_blank"
                         rel="noreferrer"
                         className="text-sm md:text-base text-neutral-900 hover:text-gold-shiny transition-colors"
                       >
-                        @hairconnection
+                        @thehairconnection.salon
                       </a>
                     </div>
                   </motion.div>

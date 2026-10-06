@@ -15,7 +15,7 @@ export default function CTA({ onOpenBooking }: CTAProps) {
         className="relative min-h-screen w-full overflow-hidden"
       >
           <img
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2574&auto=format&fit=crop"
+            src="/stock/1560066984-138dadb4c035.jpg"
             alt="Salon interior"
             className="absolute inset-0 w-full h-full object-cover object-center"
             referrerPolicy="no-referrer"

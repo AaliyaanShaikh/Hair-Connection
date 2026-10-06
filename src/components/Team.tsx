@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 const founder = {
   name: "Elena Vasquez",
   title: "Founder & Creative Director",
-  image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2574&auto=format&fit=crop",
+  image: "/stock/1573496359142-b8d87734a5a2.jpg",
   story:
     "I started Hair Connection with a simple belief: that hair is more than style—it's identity. After 15 years in Paris and New York, I came home to create a space where every client feels seen, understood, and transformed.",
   quote: "Beauty is not one look. It's your story, told through every strand.",

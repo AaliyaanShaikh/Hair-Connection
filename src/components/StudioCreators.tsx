@@ -12,42 +12,42 @@ const CREATORS = [
     name: 'Kayla Itsines',
     followers: '15.7M',
     video: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    thumbnail: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop',
+    thumbnail: '/stock/1531746020798-e6953c6e8e04.jpg',
   },
   {
     id: '2',
     name: 'Bassem Youssef',
     followers: '7.2M',
     video: 'https://www.w3schools.com/html/movie.mp4',
-    thumbnail: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop',
+    thumbnail: '/stock/1506794778202-cad84cf45f1d.jpg',
   },
   {
     id: '3',
     name: 'Farhana Bodi',
     followers: '2.1M',
     video: 'https://www.sample-videos.com/video321/mp4/360/big_buck_bunny_360p_1mb.mp4',
-    thumbnail: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=400&auto=format&fit=crop',
+    thumbnail: '/stock/1488426862026-3ee34a7d66df.jpg',
   },
   {
     id: '4',
     name: 'Danae Mercer',
     followers: '4.8M',
     video: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
-    thumbnail: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop',
+    thumbnail: '/stock/1438761681033-6461ffad8d80.jpg',
   },
   {
     id: '5',
     name: 'DJ Bliss',
     followers: '3.5M',
     video: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    thumbnail: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop',
+    thumbnail: '/stock/1500648767791-00dcc994a43e.jpg',
   },
   {
     id: '6',
     name: 'Sarah Chen',
     followers: '1.2M',
     video: 'https://butlerccwebdev.net/support/html5-video/media/bigbuckbunnytrailer-480p.mp4',
-    thumbnail: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop',
+    thumbnail: '/stock/1534528741775-53994a69daeb.jpg',
   },
 ];
 
@@ -126,7 +126,7 @@ export default function StudioCreators({ onOpenBooking }: StudioCreatorsProps) {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: 'url("https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2574&auto=format&fit=crop")',
+              backgroundImage: 'url("/stock/1521590832167-7bcbfaa6381f.jpg")',
             }}
           />
           <div className="absolute inset-0 bg-neutral-950/70" />

@@ -9,28 +9,28 @@ const services = [
     title: "The Cut",
     description: "Precision cutting tailored to your bone structure and lifestyle. Includes a consultation, shampoo, and signature blowout.",
     price: "from $120",
-    image: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=2578&auto=format&fit=crop"
+    image: "/stock/1605497788044-5a32c7078486.jpg"
   },
   {
     id: "02",
     title: "Color Artistry",
     description: "Bespoke color services ranging from subtle balayage to dramatic transformations. We use only organic, damage-free pigments.",
     price: "from $200",
-    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2669&auto=format&fit=crop"
+    image: "/stock/1595475884562-073c30d45670.jpg"
   },
   {
     id: "03",
     title: "Treatments",
     description: "Restorative rituals for your hair and scalp. Japanese head spa, keratin infusion, and deep hydration masks.",
     price: "from $85",
-    image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2670&auto=format&fit=crop"
+    image: "/stock/1595476108010-b4d1f102b1b1.jpg"
   },
   {
     id: "04",
     title: "Bridal & Event",
     description: "On-site or in-salon styling for your most important moments. Trials included for all bridal packages.",
     price: "Consultation",
-    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2669&auto=format&fit=crop"
+    image: "/stock/1519741497674-611481863552.jpg"
   }
 ];
 

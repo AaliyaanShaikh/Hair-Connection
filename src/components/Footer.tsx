@@ -38,11 +38,13 @@ export default function Footer({ onOpenBooking }: FooterProps) {
                 sustainability, and personalized style.
               </p>
               <a
-                href="#"
+                href="https://instagram.com/thehairconnection.salon"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-2 mt-6 text-gold-shiny hover:opacity-80 text-sm transition-opacity"
               >
                 <Instagram size={16} />
-                <span>@hairconnection</span>
+                <span>@thehairconnection.salon</span>
               </a>
             </div>
 

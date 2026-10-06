@@ -9,35 +9,35 @@ const products = [
     name: "Gold Lust Repair",
     brand: "Oribe",
     price: "$52",
-    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1887&auto=format&fit=crop"
+    image: "/stock/1608248543803-ba4f8c70ae0b.jpg"
   },
   {
     id: 2,
     name: "Elixir Ultime",
     brand: "Kérastase",
     price: "$54",
-    image: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=1780&auto=format&fit=crop"
+    image: "/stock/1571781926291-c477ebfd024b.jpg"
   },
   {
     id: 3,
     name: "No. 3 Perfector",
     brand: "Olaplex",
     price: "$30",
-    image: "https://images.unsplash.com/photo-1608248597279-f99d160bfbc8?q=80&w=2670&auto=format&fit=crop"
+    image: "/stock/1556228578-0d85b1a4d571.jpg"
   },
   {
     id: 4,
     name: "Essence Absolue",
     brand: "Shu Uemura",
     price: "$69",
-    image: "https://images.unsplash.com/photo-1556228720-19cb731fc22d?q=80&w=2574&auto=format&fit=crop"
+    image: "/stock/1556228720-195a672e8a03.jpg"
   },
   {
     id: 5,
     name: "Texturizing Spray",
     brand: "Oribe",
     price: "$49",
-    image: "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=1887&auto=format&fit=crop"
+    image: "/stock/1611930022073-b7a4ba5fcccd.jpg"
   }
 ];
 
